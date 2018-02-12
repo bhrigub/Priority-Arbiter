@@ -1,0 +1,9 @@
+C:/Users/Admin/Desktop/VERILOG/Lab_Work/B/Lab8/Q4/Src/l8q4.v {1 {vlog -work work -vopt C:/Users/Admin/Desktop/VERILOG/Lab_Work/B/Lab8/Q4/Src/l8q4.v
+QuestaSim vlog 10.1d Compiler 2012.11 Nov  1 2012
+-- Compiling module l8q4
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}}

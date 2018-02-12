@@ -1,0 +1,601 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: l8q4.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "l8q4.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "l8q4"
+Output Format                      : NGC
+Target Device                      : xc6vcx75t-2-ff484
+
+---- Source Options
+Top Module Name                    : l8q4
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Admin\Desktop\VERILOG\Lab_Work\B\Lab8\Q4\Src\l8q4.v" into library work
+Parsing module <l8q4>.
+Parsing module <tb>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <l8q4>.
+WARNING:HDLCompiler:817 - "C:\Users\Admin\Desktop\VERILOG\Lab_Work\B\Lab8\Q4\Src\l8q4.v" Line 166: System task monitor ignored for synthesis
+WARNING:HDLCompiler:817 - "C:\Users\Admin\Desktop\VERILOG\Lab_Work\B\Lab8\Q4\Src\l8q4.v" Line 168: System task monitor ignored for synthesis
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <l8q4>.
+    Related source file is "C:\Users\Admin\Desktop\VERILOG\Lab_Work\B\Lab8\Q4\Src\l8q4.v".
+    Found 4-bit register for signal <grant>.
+    Found 4-bit adder for signal <bpri[3]_GND_1_o_add_4_OUT> created at line 21.
+    Found 4-bit adder for signal <cpri[3]_GND_1_o_add_7_OUT> created at line 23.
+    Found 4-bit adder for signal <dpri[3]_GND_1_o_add_10_OUT> created at line 25.
+    Found 4-bit adder for signal <apri[3]_GND_1_o_add_18_OUT> created at line 33.
+    Found 4-bit adder for signal <cpri[3]_GND_1_o_add_21_OUT> created at line 35.
+    Found 4-bit adder for signal <dpri[3]_GND_1_o_add_24_OUT> created at line 37.
+    Found 4-bit adder for signal <apri[3]_GND_1_o_add_32_OUT> created at line 45.
+    Found 4-bit adder for signal <bpri[3]_GND_1_o_add_35_OUT> created at line 47.
+    Found 4-bit adder for signal <dpri[3]_GND_1_o_add_38_OUT> created at line 49.
+    Found 4-bit adder for signal <apri[3]_GND_1_o_add_46_OUT> created at line 57.
+    Found 4-bit adder for signal <bpri[3]_GND_1_o_add_49_OUT> created at line 59.
+    Found 4-bit adder for signal <cpri[3]_GND_1_o_add_52_OUT> created at line 61.
+    Found 4-bit 16-to-1 multiplexer for signal <req[3]_GND_1_o_wide_mux_107_OUT> created at line 67.
+WARNING:Xst:737 - Found 1-bit latch for signal <apri<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <apri<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <apri<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bpri<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bpri<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bpri<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <bpri<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cpri<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cpri<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cpri<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cpri<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <dpri<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <dpri<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <dpri<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <apri<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <dpri<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit comparator greater for signal <bpri[3]_apri[3]_LessThan_4_o> created at line 20
+    Found 4-bit comparator greater for signal <cpri[3]_apri[3]_LessThan_7_o> created at line 22
+    Found 4-bit comparator greater for signal <dpri[3]_apri[3]_LessThan_10_o> created at line 24
+    Found 4-bit comparator greater for signal <apri[3]_bpri[3]_LessThan_18_o> created at line 32
+    Found 4-bit comparator greater for signal <cpri[3]_bpri[3]_LessThan_21_o> created at line 34
+    Found 4-bit comparator greater for signal <dpri[3]_bpri[3]_LessThan_24_o> created at line 36
+    Found 4-bit comparator greater for signal <apri[3]_cpri[3]_LessThan_32_o> created at line 44
+    Found 4-bit comparator greater for signal <bpri[3]_cpri[3]_LessThan_35_o> created at line 46
+    Found 4-bit comparator greater for signal <dpri[3]_cpri[3]_LessThan_38_o> created at line 48
+    Found 4-bit comparator greater for signal <apri[3]_dpri[3]_LessThan_46_o> created at line 56
+    Found 4-bit comparator greater for signal <bpri[3]_dpri[3]_LessThan_49_o> created at line 58
+    Found 4-bit comparator greater for signal <cpri[3]_dpri[3]_LessThan_52_o> created at line 60
+    Found 4-bit comparator greater for signal <apri[3]_bpri[3]_LessThan_96_o> created at line 153
+    Found 4-bit comparator greater for signal <cpri[3]_bpri[3]_LessThan_97_o> created at line 153
+    Found 4-bit comparator greater for signal <dpri[3]_bpri[3]_LessThan_98_o> created at line 153
+    Found 4-bit comparator greater for signal <bpri[3]_cpri[3]_LessThan_102_o> created at line 157
+    Found 4-bit comparator greater for signal <apri[3]_cpri[3]_LessThan_103_o> created at line 157
+    Found 4-bit comparator greater for signal <dpri[3]_cpri[3]_LessThan_104_o> created at line 157
+    Summary:
+	inferred  12 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred  16 Latch(s).
+	inferred  18 Comparator(s).
+	inferred  84 Multiplexer(s).
+Unit <l8q4> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 12
+ 4-bit adder                                           : 12
+# Registers                                            : 1
+ 4-bit register                                        : 1
+# Latches                                              : 16
+ 1-bit latch                                           : 16
+# Comparators                                          : 18
+ 4-bit comparator greater                              : 18
+# Multiplexers                                         : 84
+ 1-bit 2-to-1 multiplexer                              : 53
+ 4-bit 16-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 30
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 12
+ 4-bit adder                                           : 12
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Comparators                                          : 18
+ 4-bit comparator greater                              : 18
+# Multiplexers                                         : 84
+ 1-bit 2-to-1 multiplexer                              : 53
+ 4-bit 16-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 30
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <l8q4> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block l8q4, actual ratio is 0.
+Latch bpri_0 has been replicated 1 time(s)
+Latch bpri_1 has been replicated 1 time(s)
+Latch cpri_0 has been replicated 1 time(s)
+Latch cpri_1 has been replicated 1 time(s)
+FlipFlop grant_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop grant_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop grant_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop grant_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 8
+ Flip-Flops                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : l8q4.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 293
+#      GND                         : 1
+#      LUT2                        : 10
+#      LUT3                        : 21
+#      LUT4                        : 26
+#      LUT5                        : 78
+#      LUT6                        : 154
+#      MUXF7                       : 3
+# FlipFlops/Latches                : 28
+#      FD                          : 8
+#      LD                          : 16
+#      LDC                         : 3
+#      LDP                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 8
+#      IBUF                        : 4
+#      OBUF                        : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vcx75tff484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              24  out of  93120     0%  
+ Number of Slice LUTs:                  289  out of  46560     0%  
+    Number used as Logic:               289  out of  46560     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    293
+   Number with an unused Flip Flop:     269  out of    293    91%  
+   Number with an unused LUT:             4  out of    293     1%  
+   Number of fully used LUT-FF pairs:    20  out of    293     6%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    240     3%  
+    IOB Flip Flops/Latches:               4
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------+------------------------+-------+
+Clock Signal                                           | Clock buffer(FF name)  | Load  |
+-------------------------------------------------------+------------------------+-------+
+clk                                                    | BUFGP                  | 8     |
+gip1_apri[3]_MUX_28_o(Mmux_gip1_apri[3]_MUX_28_o1:O)   | NONE(*)(apri_3)        | 4     |
+gip2_bpri[3]_MUX_57_o(Mmux_gip2_bpri[3]_MUX_57_o1:O)   | NONE(*)(bpri_3)        | 6     |
+gip1_dpri[3]_MUX_128_o(Mmux_gip1_dpri[3]_MUX_128_o11:O)| NONE(*)(dpri_2)        | 4     |
+gip3_cpri[3]_MUX_93_o(Mmux_gip3_cpri[3]_MUX_93_o1:O)   | NONE(*)(cpri_3)        | 6     |
+-------------------------------------------------------+------------------------+-------+
+(*) These 4 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.124ns (Maximum Frequency: 195.156MHz)
+   Minimum input arrival time before clock: 2.014ns
+   Maximum output required time after clock: 0.659ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'gip1_apri[3]_MUX_28_o'
+  Clock period: 5.050ns (frequency: 198.030MHz)
+  Total number of paths / destination ports: 10054 / 4
+-------------------------------------------------------------------------
+Delay:               5.050ns (Levels of Logic = 9)
+  Source:            apri_3 (LATCH)
+  Destination:       apri_3 (LATCH)
+  Source Clock:      gip1_apri[3]_MUX_28_o falling
+  Destination Clock: gip1_apri[3]_MUX_28_o falling
+
+  Data Path: apri_3 to apri_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              27   0.323   0.555  apri_3 (apri_3)
+     LUT6:I4->O            1   0.061   0.426  Mmux_n026831_G (N318)
+     LUT3:I1->O           20   0.061   0.532  Mmux_n0268311 (Madd_cpri[3]_GND_1_o_add_21_OUT_lut<2>)
+     LUT5:I3->O            1   0.061   0.426  Mmux_cpri[3]_cpri[3]_mux_28_OUT41_SW2 (N156)
+     LUT6:I4->O           35   0.061   0.487  Mmux_cpri[3]_cpri[3]_mux_28_OUT41 (cpri[3]_cpri[3]_mux_28_OUT<3>)
+     LUT6:I5->O            1   0.061   0.426  Mmux_n027821_SW0 (N42)
+     LUT6:I4->O            7   0.061   0.600  Mmux_n027821 (Madd_apri[3]_GND_1_o_add_46_OUT_lut<1>)
+     LUT4:I0->O            2   0.061   0.362  apri[3]_dpri[3]_LessThan_46_o1_SW0 (N12)
+     LUT5:I4->O            2   0.061   0.362  apri[3]_dpri[3]_LessThan_46_o1 (apri[3]_dpri[3]_LessThan_46_o)
+     LUT6:I5->O            1   0.061   0.000  Mmux_apri[3]_apri[3]_MUX_16_o110 (apri[3]_apri[3]_MUX_16_o)
+     LD:D                     -0.044          apri_3
+    ----------------------------------------
+    Total                      5.050ns (0.872ns logic, 4.178ns route)
+                                       (17.3% logic, 82.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'gip2_bpri[3]_MUX_57_o'
+  Clock period: 4.939ns (frequency: 202.472MHz)
+  Total number of paths / destination ports: 10961 / 6
+-------------------------------------------------------------------------
+Delay:               4.939ns (Levels of Logic = 8)
+  Source:            bpri_2 (LATCH)
+  Destination:       bpri_1 (LATCH)
+  Source Clock:      gip2_bpri[3]_MUX_57_o falling
+  Destination Clock: gip2_bpri[3]_MUX_57_o falling
+
+  Data Path: bpri_2 to bpri_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              16   0.323   0.779  bpri_2 (bpri_2)
+     LUT6:I0->O            1   0.061   0.426  Mmux_bpri[3]_bpri[3]_mux_13_OUT31_G (N316)
+     LUT3:I1->O           16   0.061   0.777  Mmux_bpri[3]_bpri[3]_mux_13_OUT311 (bpri[3]_bpri[3]_mux_13_OUT<2>)
+     LUT5:I0->O           13   0.061   0.425  cpri[3]_bpri[3]_LessThan_21_o5 (cpri[3]_bpri[3]_LessThan_21_o)
+     LUT6:I5->O            2   0.061   0.362  bpri[3]_cpri[3]_LessThan_35_o5_SW0 (N32)
+     LUT6:I5->O            7   0.061   0.391  bpri[3]_cpri[3]_LessThan_35_o5 (bpri[3]_cpri[3]_LessThan_35_o)
+     LUT6:I5->O            6   0.061   0.540  Mmux_n028031 (Madd_bpri[3]_GND_1_o_add_49_OUT_lut<2>)
+     LUT6:I3->O            1   0.061   0.426  bpri[3]_dpri[3]_LessThan_49_o1_SW6 (N138)
+     LUT6:I4->O            2   0.061   0.000  Mmux_bpri[3]_bpri[3]_MUX_55_o123 (bpri[3]_bpri[3]_MUX_73_o)
+     LD:D                     -0.044          bpri_1
+    ----------------------------------------
+    Total                      4.939ns (0.811ns logic, 4.128ns route)
+                                       (16.4% logic, 83.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'gip1_dpri[3]_MUX_128_o'
+  Clock period: 4.201ns (frequency: 238.011MHz)
+  Total number of paths / destination ports: 1019 / 4
+-------------------------------------------------------------------------
+Delay:               4.201ns (Levels of Logic = 8)
+  Source:            dpri_1 (LATCH)
+  Destination:       dpri_3 (LATCH)
+  Source Clock:      gip1_dpri[3]_MUX_128_o falling
+  Destination Clock: gip1_dpri[3]_MUX_128_o falling
+
+  Data Path: dpri_1 to dpri_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q             29   0.323   0.695  dpri_1 (dpri_1)
+     LUT4:I0->O            4   0.061   0.374  dpri[3]_apri[3]_LessThan_10_o11 (dpri[3]_apri[3]_LessThan_10_o1)
+     LUT5:I4->O           21   0.061   0.537  dpri[3]_apri[3]_LessThan_10_o12 (dpri[3]_apri[3]_LessThan_10_o)
+     LUT6:I4->O            3   0.061   0.369  dpri[3]_bpri[3]_LessThan_24_o5_SW0 (N18)
+     LUT5:I4->O           13   0.061   0.494  dpri[3]_bpri[3]_LessThan_24_o5 (dpri[3]_bpri[3]_LessThan_24_o)
+     LUT6:I4->O            5   0.061   0.380  dpri[3]_cpri[3]_LessThan_38_o5_SW0 (N20)
+     LUT5:I4->O            7   0.061   0.391  dpri[3]_cpri[3]_LessThan_38_o5 (dpri[3]_cpri[3]_LessThan_38_o)
+     LUT5:I4->O            1   0.061   0.000  Mmux_dpri[3]_dpri[3]_MUX_126_o18_G (N310)
+     MUXF7:I1->O           1   0.211   0.000  Mmux_dpri[3]_dpri[3]_MUX_126_o18 (dpri[3]_dpri[3]_MUX_126_o)
+     LDC:D                    -0.044          dpri_3
+    ----------------------------------------
+    Total                      4.201ns (0.961ns logic, 3.240ns route)
+                                       (22.9% logic, 77.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'gip3_cpri[3]_MUX_93_o'
+  Clock period: 5.124ns (frequency: 195.156MHz)
+  Total number of paths / destination ports: 5964 / 6
+-------------------------------------------------------------------------
+Delay:               5.124ns (Levels of Logic = 9)
+  Source:            cpri_2 (LATCH)
+  Destination:       cpri_1 (LATCH)
+  Source Clock:      gip3_cpri[3]_MUX_93_o falling
+  Destination Clock: gip3_cpri[3]_MUX_93_o falling
+
+  Data Path: cpri_2 to cpri_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              14   0.323   0.768  cpri_2 (cpri_2)
+     LUT6:I0->O            1   0.061   0.426  Mmux_n026831_G (N318)
+     LUT3:I1->O           20   0.061   0.532  Mmux_n0268311 (Madd_cpri[3]_GND_1_o_add_21_OUT_lut<2>)
+     LUT5:I3->O            1   0.061   0.426  Mmux_cpri[3]_cpri[3]_mux_28_OUT41_SW2 (N156)
+     LUT6:I4->O           35   0.061   0.487  Mmux_cpri[3]_cpri[3]_mux_28_OUT41 (cpri[3]_cpri[3]_mux_28_OUT<3>)
+     LUT5:I4->O            1   0.061   0.426  Mmux_dpri[3]_dpri[3]_MUX_126_o141_SW0 (N51)
+     LUT6:I4->O            5   0.061   0.449  Mmux_dpri[3]_dpri[3]_MUX_126_o141 (dpri[3]_dpri[3]_mux_43_OUT<0>)
+     LUT5:I3->O            4   0.061   0.374  cpri[3]_dpri[3]_LessThan_52_o1_SW0 (N28)
+     LUT6:I5->O            2   0.061   0.362  cpri[3]_dpri[3]_LessThan_52_o1 (cpri[3]_dpri[3]_LessThan_52_o)
+     LUT6:I5->O            2   0.061   0.000  Mmux_cpri[3]_cpri[3]_MUX_100_o113 (cpri[3]_cpri[3]_MUX_109_o)
+     LD:D                     -0.044          cpri_1
+    ----------------------------------------
+    Total                      5.124ns (0.872ns logic, 4.252ns route)
+                                       (17.0% logic, 83.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 72 / 8
+-------------------------------------------------------------------------
+Offset:              2.014ns (Levels of Logic = 4)
+  Source:            reqb (PAD)
+  Destination:       grant_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reqb to grant_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   0.003   0.744  reqb_IBUF (reqb_IBUF)
+     LUT5:I0->O            2   0.061   0.571  Mmux_req[3]_GND_1_o_wide_mux_107_OUT6131 (Mmux_req[3]_GND_1_o_wide_mux_107_OUT613)
+     LUT6:I2->O            1   0.061   0.512  Mmux_req[3]_GND_1_o_wide_mux_107_OUT62 (Mmux_req[3]_GND_1_o_wide_mux_107_OUT61)
+     LUT6:I3->O            2   0.061   0.000  Mmux_req[3]_GND_1_o_wide_mux_107_OUT65 (req[3]_GND_1_o_wide_mux_107_OUT<1>)
+     FD:D                     -0.002          grant_1
+    ----------------------------------------
+    Total                      2.014ns (0.186ns logic, 1.828ns route)
+                                       (9.2% logic, 90.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              0.659ns (Levels of Logic = 1)
+  Source:            grant_3_1 (FF)
+  Destination:       gip1 (PAD)
+  Source Clock:      clk rising
+
+  Data Path: grant_3_1 to gip1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.317   0.339  grant_3_1 (grant_3_1)
+     OBUF:I->O                 0.003          gip1_OBUF (gip1)
+    ----------------------------------------
+    Total                      0.659ns (0.320ns logic, 0.339ns route)
+                                       (48.5% logic, 51.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+gip1_apri[3]_MUX_28_o |         |    3.808|         |         |
+gip1_dpri[3]_MUX_128_o|         |    3.872|         |         |
+gip2_bpri[3]_MUX_57_o |         |    3.750|         |         |
+gip3_cpri[3]_MUX_93_o |         |    3.893|         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gip1_apri[3]_MUX_28_o
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+clk                   |         |         |    5.322|         |
+gip1_apri[3]_MUX_28_o |         |         |    5.050|         |
+gip1_dpri[3]_MUX_128_o|         |         |    5.050|         |
+gip2_bpri[3]_MUX_57_o |         |         |    5.111|         |
+gip3_cpri[3]_MUX_93_o |         |         |    5.263|         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gip1_dpri[3]_MUX_128_o
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+clk                   |         |         |    4.127|         |
+gip1_apri[3]_MUX_28_o |         |         |    4.034|         |
+gip1_dpri[3]_MUX_128_o|         |         |    4.201|         |
+gip2_bpri[3]_MUX_57_o |         |         |    4.079|         |
+gip3_cpri[3]_MUX_93_o |         |         |    4.001|         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gip2_bpri[3]_MUX_57_o
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+clk                   |         |         |    5.794|         |
+gip1_apri[3]_MUX_28_o |         |         |    5.521|         |
+gip1_dpri[3]_MUX_128_o|         |         |    4.982|         |
+gip2_bpri[3]_MUX_57_o |         |         |    4.939|         |
+gip3_cpri[3]_MUX_93_o |         |         |    5.735|         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gip3_cpri[3]_MUX_93_o
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+clk                   |         |         |    5.183|         |
+gip1_apri[3]_MUX_28_o |         |         |    4.911|         |
+gip1_dpri[3]_MUX_128_o|         |         |    5.062|         |
+gip2_bpri[3]_MUX_57_o |         |         |    4.944|         |
+gip3_cpri[3]_MUX_93_o |         |         |    5.124|         |
+----------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.78 secs
+ 
+--> 
+
+Total memory usage is 212008 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   18 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
